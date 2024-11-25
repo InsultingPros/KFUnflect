@@ -1,4 +1,7 @@
-# Unflect
+# KF Unflect
+
+> [!IMPORTANT]
+> This fork was created to serve as tested and reliable library for Killing Floor mods specifically.
 
 Unflect is a proof-of-concept that exploits the UnrealScript compiler to trick it into compiling an illegal class casting. For example, we can retrieve the values of strictly native fields by casting a UFunction instance into our own mirrored UFunction.
 
@@ -6,10 +9,11 @@ Unflect is a proof-of-concept that exploits the UnrealScript compiler to trick i
 
 ## Compiling
 
-The source is written for Unreal Tournament 2004, but the code should compile for most UE2 games, possibly requiring some minor alignment changes in the native mirror classes.
+Use [KF Compile Tool](https://github.com/InsultingPros/KFCompileTool) for easy compilation.
 
-* Run `make.bat` (The directory with the `/Classes/` directory has to be located at the root of the UE2 installation e.g. (`C:\\UT2004/Unflect/`)
-* Run `test.bat` to confirm that everything's working.
+```ini
+EditPackages=KFUnflect
+```
 
 ## Usage
 
@@ -42,4 +46,5 @@ log("MetaData: " $ class'CoreAPI'.static.GetTypeMetaData(Property'MyCommentStrin
 
 ## Derivative works
 
-* [ElitePatch](https://github.com/EliteTrials/ElitePatch) - A UT2004 patch that is activated at run-time on the server and all its clients
+* [KFPatcher](https://github.com/InsultingPros/KFPatcher) - Killing Floor 1 serverside fixes and QoL additions.
+* [AccuracyBroadcaster](https://github.com/InsultingPros/AccuracyBroadcaster) - print headshot accuracy message. Show em your skills!

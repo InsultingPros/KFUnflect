@@ -6,9 +6,9 @@ var UTextBuffer     CppText;
 var UField          Children;
 var int             PropertiesSize;
 var name            FriendlyName;
-// Swap if you need to modify the bytes at runtime
-// var array<byte>     Script;
-var Unflect.Array   Script;
+// Swap if you need to modify the bytes at runtime (yes we need it - Shtoyan)
+var array<byte>     Script;
+// var Unflect.Array   Script;
 
 var int             TextPos;
 var int             Line;
@@ -37,6 +37,6 @@ final function static UStruct AsStruct(Object object)
 
     reference.Object = object;
     pointer = reference;
-    
+
     return dereferenced;
 }
